@@ -6,6 +6,8 @@ require github.com/sagernet/sing-box v0.0.0
 
 replace github.com/sagernet/sing-box => ../
 
+replace github.com/anytls/sing-anytls => github.com/changchinlan/sing-anytls v0.0.12-0.20260701054316-2d5c546a82cf
+
 require (
 	github.com/docker/docker v27.3.1+incompatible
 	github.com/docker/go-connections v0.5.0
@@ -29,7 +31,7 @@ require (
 	github.com/alexbrainman/sspi v0.0.0-20231016080023-1a75b4708caa // indirect
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/anthropics/anthropic-sdk-go v1.19.0 // indirect
-	github.com/anytls/sing-anytls v0.0.11 // indirect
+	github.com/anytls/sing-anytls v0.0.12-0.20260701054316-2d5c546a82cf // indirect
 	github.com/caddyserver/certmagic v0.25.0 // indirect
 	github.com/caddyserver/zerossl v0.1.3 // indirect
 	github.com/coder/websocket v1.8.14 // indirect

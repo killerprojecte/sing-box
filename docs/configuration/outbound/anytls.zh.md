@@ -14,6 +14,7 @@ icon: material/new-box
   "server": "127.0.0.1",
   "server_port": 1080,
   "password": "8JCsPssfgS8tiRwiMlhARg==",
+  "client_id": "mihomo/v1.19.27",
   "idle_session_check_interval": "30s",
   "idle_session_timeout": "30s",
   "min_idle_session": 5,
@@ -42,6 +43,10 @@ icon: material/new-box
 ==必填==
 
 AnyTLS 密码。
+
+#### client_id
+
+AnyTLS 客户端 ID。默认值：`mihomo/v1.19.27`。
 
 #### idle_session_check_interval
 

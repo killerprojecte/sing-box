@@ -19,6 +19,7 @@ type AnyTLSOutboundOptions struct {
 	ServerOptions
 	OutboundTLSOptionsContainer
 	Password                 string             `json:"password,omitempty"`
+	ClientID                 string             `json:"client_id,omitempty"`
 	IdleSessionCheckInterval badoption.Duration `json:"idle_session_check_interval,omitempty"`
 	IdleSessionTimeout       badoption.Duration `json:"idle_session_timeout,omitempty"`
 	MinIdleSession           int                `json:"min_idle_session,omitempty"`

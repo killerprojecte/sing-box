@@ -5,7 +5,7 @@ go 1.24.7
 require (
 	filippo.io/age v1.3.1
 	github.com/anthropics/anthropic-sdk-go v1.26.0
-	github.com/anytls/sing-anytls v0.0.11
+	github.com/anytls/sing-anytls v0.0.12-0.20260701054316-2d5c546a82cf
 	github.com/caddyserver/certmagic v0.25.3-0.20260421143802-60d9d8b415d6
 	github.com/caddyserver/zerossl v0.1.5
 	github.com/coder/websocket v1.8.14
@@ -180,3 +180,5 @@ require (
 	lukechampine.com/blake3 v1.3.0 // indirect
 	zombiezen.com/go/capnproto2 v2.18.2+incompatible // indirect
 )
+
+replace github.com/anytls/sing-anytls => github.com/changchinlan/sing-anytls v0.0.12-0.20260701054316-2d5c546a82cf

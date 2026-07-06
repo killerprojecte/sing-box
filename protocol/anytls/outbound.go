@@ -21,6 +21,8 @@ import (
 	anytls "github.com/anytls/sing-anytls"
 )
 
+const defaultClientID = "mihomo/v1.19.27"
+
 func RegisterOutbound(registry *outbound.Registry) {
 	outbound.Register[option.AnyTLSOutboundOptions](registry, C.TypeAnyTLS, NewOutbound)
 }
@@ -69,8 +71,14 @@ func NewOutbound(ctx context.Context, router adapter.Router, logger log.ContextL
 
 	outbound.dialer = tls.NewDialer(outboundDialer, tlsConfig)
 
+	clientID := options.ClientID
+	if clientID == "" {
+		clientID = defaultClientID
+	}
+
 	client, err := anytls.NewClient(ctx, anytls.ClientConfig{
 		Password:                 options.Password,
+		ClientID:                 clientID,
 		IdleSessionCheckInterval: options.IdleSessionCheckInterval.Build(),
 		IdleSessionTimeout:       options.IdleSessionTimeout.Build(),
 		MinIdleSession:           options.MinIdleSession,
